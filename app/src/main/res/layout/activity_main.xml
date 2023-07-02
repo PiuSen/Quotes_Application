@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiant"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/quote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="QUOTIFY"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp" />
+    <LinearLayout
+        android:id="@+id/linerlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="40dp"
+        android:background="@drawable/bg_card">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:scaleX="-1"
+            android:scaleY="-1"
+            android:src="@drawable/baseline_format_quote_24"
+            app:tint="@color/black" />
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/genius_is_one_percent_inspiration_and_ninety_nine_percent_perspiration"
+            android:textSize="22sp"
+            android:paddingStart="10dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bruce_wayne"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:paddingStart="10dp"
+            android:textStyle="italic"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearlayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/previous"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onPrevious"
+            android:textColor="@color/white"
+            android:text="PREVIOUS"/>
+       <TextView
+           android:id="@+id/next"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="NEXT"
+           android:onClick="onNext"
+           android:textColor="@color/white"
+           android:textAlignment="textEnd"
+           android:layout_weight="1"/>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:clickable="true"
+        android:id="@+id/share"
+        android:onClick="onShare"
+        android:backgroundTint="#8F8E8E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/linerlayout1"
+        app:layout_constraintEnd_toEndOf="@id/linerlayout1"
+        app:layout_constraintTop_toBottomOf="@id/linerlayout1"
+        app:srcCompat="@drawable/baseline_share_24"
+        android:layout_marginRight="24dp"
+        android:contentDescription="TODO" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
